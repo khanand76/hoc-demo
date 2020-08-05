@@ -13,7 +13,7 @@ const Loading = loadingProp => WrappedComponent => {
       this.startTimer = Date.now();
     }
 
-    componentWillUpdate(nextProps) {
+    componentDidUpdate(nextProps) {
       if (!isEmpty(nextProps[loadingProp])) {
         this.endTimer = Date.now();
       }
